@@ -1,6 +1,7 @@
 export interface Topic{
-  title: string;
-  description: string;
+  id?:number;
+  title:string;
+  description:string;
   likes:number;
-  dislikes:number
+  dislikes:number;
 }

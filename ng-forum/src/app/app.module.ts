@@ -11,8 +11,8 @@ import {ForumModule} from "./forum/forum.module";
   ],
   imports: [
     BrowserModule,
-    ForumModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ForumModule
   ],
   providers: [],
   bootstrap: [AppComponent]

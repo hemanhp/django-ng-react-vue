@@ -1,8 +1,9 @@
-<div class="topic-item">
-  <h3> {{item?.title}}</h3>
-  <h4> {{item?.description}}</h4>
+<div class="item">
+  <p>{{item?.title}}</p>
+  <p>{{item?.description}}</p>
 
-  <div class="actions">
-    <span>{{item?.likes}} Likes</span> | <span> {{item?.dislikes}} Dislikes</span>
-  </div>
+  <p (click)="onLike()" >{{item?.likes}} Likes</p>
+  <p (click)="onDislike()">{{item?.dislikes}} Dislikes</p>
+
 </div>
+

@@ -3,8 +3,9 @@ import { CommonModule } from '@angular/common';
 import { TopicsPageComponent } from './topics-page/topics-page.component';
 import { TopicsListComponent } from './topics-list/topics-list.component';
 import { TopicsItemComponent } from './topics-item/topics-item.component';
-import { TopicsForumComponent } from './topics-forum/topics-forum.component';
+import { TopicsFormComponent } from './topics-form/topics-form.component';
 import {HttpClientModule} from "@angular/common/http";
+import {ReactiveFormsModule} from "@angular/forms";
 
 
 
@@ -13,11 +14,12 @@ import {HttpClientModule} from "@angular/common/http";
     TopicsPageComponent,
     TopicsListComponent,
     TopicsItemComponent,
-    TopicsForumComponent
+    TopicsFormComponent
   ],
   imports: [
+    CommonModule,
     HttpClientModule,
-    CommonModule
+    ReactiveFormsModule
   ]
 })
 export class ForumModule { }

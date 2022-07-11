@@ -1,5 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {Topic} from "../topic";
+import {ForumRepoService} from "../forum-repo.service";
 
 @Component({
   selector: 'app-topics-item',
@@ -8,11 +9,19 @@ import {Topic} from "../topic";
 })
 export class TopicsItemComponent implements OnInit {
 
-  @Input() item?:Topic;
+  @Input() item?:Topic
 
-  constructor() { }
+  constructor(private repo:ForumRepoService) { }
 
   ngOnInit(): void {
+
+  }
+
+  onLike(){
+    this.repo.createVote(this.item!.id!, 'l').subscribe((e=> this.item!.likes +=1))
+  }
+  onDislike(){
+    this.repo.createVote(this.item!.id!, 'l').subscribe((e=> this.item!.dislikes +=1))
   }
 
 }

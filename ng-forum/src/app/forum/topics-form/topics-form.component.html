@@ -1,0 +1,5 @@
+<form [formGroup]="topicForm" (ngSubmit)="onSubmit()">
+  Title <input type="text" name="title" formControlName="title">
+  Description <textarea name="description" formControlName="description"></textarea>
+  <input type="submit">
+</form>
