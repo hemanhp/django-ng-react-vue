@@ -8,7 +8,7 @@ import {Topic} from "../topic";
 })
 export class TopicsListComponent implements OnInit {
 
-  @Input() items:Topic[] = [];
+  @Input() items:Topic[] = []
 
   constructor() { }
 

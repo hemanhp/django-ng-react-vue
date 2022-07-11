@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {Topic} from "../topic";
 import {ForumRepoService} from "../forum-repo.service";
+import {Topic} from "../topic";
 
 @Component({
   selector: 'app-topics-page',
@@ -14,7 +14,13 @@ export class TopicsPageComponent implements OnInit {
   constructor(private repo:ForumRepoService) { }
 
   ngOnInit(): void {
-    this.repo.getAllTopics().subscribe((e) => {this.topics = e;});
+    this.repo.getAllTopic().subscribe(e=>this.topics = e)
   }
+
+
+  onTopicCreate(topic:Topic){
+    this.repo.createTopic(topic).subscribe((e=> this.topics = [e].concat(this.topics)));
+  }
+
 
 }
